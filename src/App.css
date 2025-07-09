@@ -1,0 +1,160 @@
+/* src/App.css */
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+    flex: 1;
+    padding: 15px 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+}
+
+.nav-button.active { /* 激活状态的按钮 */
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    font-weight: bold;
+}
+
+.content-section {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.heading {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.ul-reset { /* 使用更具体的类名，避免与浏览器默认ul样式冲突 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+.list-item-text-container { /* 用于包裹希望内容和日期的flex容器 */
+    display: flex;
+    flex-direction: column;
+}
+
+.list-item-text {
+    flex: 1;
+    margin-right: 10px;
+    color: #666;
+}
+
+.list-item-hope-text {
+    font-weight: bold;
+    color: #333;
+}
+
+.list-item-hope-text.completed { /* 已完成的希望内容 */
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-button {
+    padding: 8px 12px;
+    background-color: #dc3545; /* 红色 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 5px;
+}
+
+.complete-button {
+    padding: 8px 12px;
+    background-color: #28a745; /* 绿色 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.complete-button.pending { /* 未完成状态的按钮 */
+    background-color: #6c757d; /* 灰色 */
+}
+
+.form-paragraph {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+.form-input {
+    width: calc(100% - 100px); /* calc() 在CSS中完全支持 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.add-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
